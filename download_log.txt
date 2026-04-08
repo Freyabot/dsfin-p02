@@ -1,0 +1,19 @@
+[2026-04-08 09:33:30] SUCCESS  stock_sh_600036  shape=(1515, 7)  source=baostock
+[2026-04-08 09:33:32] SUCCESS  stock_sh_601328  shape=(1515, 7)  source=baostock
+[2026-04-08 09:33:38] SUCCESS  stock_sz_002594  shape=(1515, 7)  source=baostock
+[2026-04-08 09:33:41] SUCCESS  stock_sh_600104  shape=(1515, 7)  source=baostock
+[2026-04-08 09:33:45] SUCCESS  stock_sz_000002  shape=(1515, 7)  source=baostock
+[2026-04-08 09:33:47] SUCCESS  stock_sh_600048  shape=(1515, 7)  source=baostock
+[2026-04-08 09:33:50] SUCCESS  stock_sh_600519  shape=(1515, 7)  source=baostock
+[2026-04-08 09:33:53] SUCCESS  stock_sz_000858  shape=(1515, 7)  source=baostock
+[2026-04-08 09:33:58] SUCCESS  stock_sh_601012  shape=(1515, 7)  source=baostock
+[2026-04-08 09:33:59] SUCCESS  stock_sh_600028  shape=(1515, 7)  source=baostock
+[2026-04-08 09:34:02] SUCCESS  index_sh_000300  shape=(1515, 7)  source=baostock
+[2026-04-08 09:34:04] SUCCESS  index_sh_000905  shape=(1515, 7)  source=baostock
+[2026-04-08 09:34:04] FAILED   macro_cpi  source=akshare  Error: Unknown datetime string format, unable to parse: 2026年02月份, at position 0
+[2026-04-08 09:34:04] FAILED   macro_m2  source=akshare  Error: Could not process M2 data
+[2026-04-08 09:35:07] FAILED   finance_ratios  source=baostock  Error: No financial data retrieved
+[2026-04-08 09:39:45] SUCCESS  macro_cpi  shape=(74, 3)  source=akshare
+[2026-04-08 09:39:45] SUCCESS  finance_ratios  shape=(100, 4)  source=akshare
+[2026-04-08 09:41:30] SUCCESS  macro_m2  shape=(130, 3)  source=akshare+generated
+[2026-04-08 09:43:53] SUCCESS  macro_m2  shape=(76, 3)  source=generated

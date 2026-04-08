@@ -1,0 +1,78 @@
+# 数据清洗
+
+## 单表清洗
+
+对每只股票的原始数据执行以下清洗步骤：
+
+### 缺失值检测与处理
+- 统计每列缺失值的数量和比例
+- 采用向前填充（ffill）处理，利用金融数据的时间序列连续性
+- 剩余缺失值使用向后填充（bfill）
+
+### 日期格式统一
+- 统一为`datetime64`格式
+- 设置日期为索引
+
+### 数据类型检查
+- 确保价格、成交量列为数值型
+- 对字符型数据进行转换
+
+### 重复值处理
+- 检测并删除重复行
+- 记录删除数量
+
+### 离群值标注
+- 计算日收益率：$r_t = \ln(P_t / P_{t-1})$
+- 对单日涨跌幅超过±20%的记录在`is_extreme`列中标注
+
+清洗后的数据示例：
+
+| date       | close    | return    | is_extreme | code       | name   | industry |
+|------------|----------|-----------|------------|------------|--------|----------|
+| 2020-01-02 | 29.43298 |           | False      | sh.600036  | 招商银行 | 银行     |
+| 2020-01-03 | 29.82663 | 0.01329   | False      | sh.600036  | 招商银行 | 银行     |
+
+## 宽表与长表转换
+
+**宽表**：日期为索引，每列一只股票的收盘价
+
+- 适合横向比较多只股票
+- 计算相关系数矩阵
+- 可视化多只股票走势
+
+**长表**：字段为`date, code, close, name, industry`
+
+- 适合按股票分组统计
+- 绘制分面图
+- 进行回归分析
+
+## 数据存储
+
+### 方式A：CSV
+所有原始数据和清洗后数据均保存为CSV格式，便于查看和交换。
+
+### 方式C：SQLite
+设计了以下表结构：
+
+```sql
+CREATE TABLE stock_price (
+    code    TEXT,
+    date    TEXT,
+    close   REAL,
+    volume  REAL,
+    PRIMARY KEY (code, date)
+);
+CREATE TABLE macro_data (
+    date      TEXT,
+    indicator TEXT,
+    value     REAL,
+    PRIMARY KEY (date, indicator)
+);
+CREATE TABLE stock_info (
+    code     TEXT PRIMARY KEY,
+    name     TEXT,
+    industry TEXT
+);
+```
+
+演示了跨表JOIN、成交量排名查询、行业年均收盘价对比等实用SQL查询。

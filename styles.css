@@ -1,0 +1,43 @@
+/* CSS styles for Quarto book */
+
+/* 标题样式 */
+h1, h2, h3 {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* 代码块样式 */
+pre {
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* 表格样式 */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* 图片居中 */
+figure {
+  text-align: center;
+}
+
+/* 自定义颜色 */
+:root {
+  --bs-primary: #1f77b4;
+  --bs-link-color: #1f77b4;
+}

@@ -1,0 +1,18 @@
+project:
+  type: book
+  output-dir: _site
+
+book:
+  title: "金融数据获取、管理与初步分析"
+  author: "Student"
+  chapters:
+    - index.qmd
+    - 01-introduction.qmd
+    - 02-data-download.qmd
+    - 03-data-cleaning.qmd
+    - 04-analysis.qmd
+    - 05-conclusion.qmd
+
+format:
+  html:
+    number-sections: true
