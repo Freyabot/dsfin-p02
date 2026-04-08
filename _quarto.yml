@@ -4,7 +4,7 @@ project:
 
 book:
   title: "金融数据获取、管理与初步分析"
-  author: "Student"
+  author: "吴思雨25210090"
   chapters:
     - index.qmd
     - 01-introduction.qmd
