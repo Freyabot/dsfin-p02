@@ -17,7 +17,7 @@ __pycache__/
 *.pyc
 
 # Quarto
-_site/
+# _site/  # 不再使用，已改为 docs/
 .quarto/
 *.quarto_ipynb
 *.quarto_ipynb_*
@@ -32,3 +32,6 @@ report.html
 
 # 日志文件
 download_log.txt
+
+/.quarto/
+**/*.quarto_ipynb
