@@ -1,26 +1,34 @@
-# 原始数据（体积较大，通过运行 Notebook 重新下载）
-data/stock/
-data/index/
-data/macro/
-data/finance/
+# 所有数据文件（通过运行脚本重新生成）
+data/
 
 # 数据库文件
 *.db
 
+# 生成的图片和输出
+output/
+
 # Notebook 缓存
 .ipynb_checkpoints/
+*.ipynb
 
 # 系统文件
 .DS_Store
 __pycache__/
+*.pyc
 
 # Quarto
 _site/
 .quarto/
+*.quarto_ipynb
+*.quarto_ipynb_*
+index.quarto_ipynb*
 
 # IDE
 .vscode/
 .idea/
 
-/.quarto/
-**/*.quarto_ipynb
+# HTML 报告
+report.html
+
+# 日志文件
+download_log.txt

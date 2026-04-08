@@ -34,17 +34,10 @@
 
 ### GitHub 仓库
 
-https://github.com/[你的用户名]/dshw-p02
+https://github.com/Freyabot/dshw-p02
 
 ### Quarto 电子书
 
-https://[你的用户名].github.io/dshw-p02/
+https://FreyaBot.github.io/dshw-p02/
 
-### 如何运行
 
-1. 安装依赖：`pip install -r requirements.txt`
-2. 运行 `01_download.ipynb` 下载原始数据
-3. 运行 `02_clean.ipynb` 清洗并存储数据
-4. 运行 `03_analysis.ipynb` 查看分析结果
-5. 打开 `report.html` 阅读完整报告
-6. （可选）渲染Quarto电子书：`quarto render`

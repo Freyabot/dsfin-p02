@@ -30,6 +30,6 @@
 
 ---
 
-**GitHub仓库**：https://github.com/[your-username]/dshw-p02
+**GitHub仓库**：https://github.com/Freyabot/dshw-p02
 
-**在线电子书**：https://[your-username].github.io/dshw-p02/
+**在线电子书**：https://Frereyabot.github.io/dshw-p02/
